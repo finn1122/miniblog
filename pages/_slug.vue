@@ -4,18 +4,12 @@
       <h1>{{ post.title }}</h1>
       <div class="author">
         <p>Por {{ post.author }}</p>
-        <small
-        >Fecha de publicacion:
-        {{ post.updated }}</small
-        >
+        <small>Fecha de publicacion: {{ post.updated }}</small>
       </div>
       <p>{{ post.description }}</p>
       <figure>
-        <img 
-          :src="post.cover"
-          :alt="post.cover"
-          />
-          <figcaption>Portada - {{ post.title }}</figcaption>
+        <img :src="post.cover" :alt="post.cover" />
+        <figcaption>Portada - {{ post.title }}</figcaption>
       </figure>
       <VueMarkdown class="markdown">{{ post.content }}</VueMarkdown>
     </article>
@@ -23,14 +17,14 @@
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown';
+import VueMarkdown from 'vue-markdown'
 
 export default {
   name: 'ArticlePage',
   components: {
     VueMarkdown,
   },
-  data(){
+  data() {
     return {
       post: {
         slug: 'mi-primer-post',
@@ -40,17 +34,14 @@ export default {
         description: 'lorem ipsum dolor sit amet',
         cover: 'https://via.placeholder.com/1024x420',
         content: '# Title\n\n## Second title\n\n Lorem ipsum dolor sit amet',
-      }
-    };
+      },
+    }
   },
   head() {
     return {
       title: this.post?.title,
-      meta:[
-        { name: 'description', content: this.post?.description || '' },
-      ]
-
-    };
+      meta: [{ name: 'description', content: this.post?.description || '' }],
+    }
   },
 }
 </script>

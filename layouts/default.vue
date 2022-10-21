@@ -1,18 +1,18 @@
 <template>
-    <div class="layout-default">
-        <header>
-            <menu>
-                <NuxtLink to="/">Miniblog</NuxtLink>
-                <NuxtLink to="/">Sobre mi</NuxtLink>
-            </menu>
-        </header>
-        <Nuxt />
-    </div>
+  <div class="layout-default">
+    <header>
+      <menu>
+        <NuxtLink to="/">Miniblog</NuxtLink>
+        <NuxtLink to="/">Sobre mi</NuxtLink>
+      </menu>
+    </header>
+    <Nuxt />
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'LayoutDefault',
+  name: 'LayoutDefault',
 }
 </script>
 

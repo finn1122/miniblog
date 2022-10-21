@@ -15,18 +15,18 @@
 
 <script>
 export default {
-    name: "IndexPage",
-    data() {
-      return {
-        articles: [
-          {
-            title: 'mi-primer-post',
-            slug: 'mi-primer-post',
-            date: new Date(),
-          }
-        ]
-      };
-    },
+  name: 'IndexPage',
+  data() {
+    return {
+      articles: [
+        {
+          title: 'mi-primer-post',
+          slug: 'mi-primer-post',
+          date: new Date(),
+        },
+      ],
+    }
+  },
 }
 </script>
 
